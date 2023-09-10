@@ -63,9 +63,9 @@ def visual_iris(data_iris):
 
 
 # if __name__ == "__main__":
-# pylint: disable=no-value-for-parameter
-# generate_iris()
-# cur_path = "./Iris.csv"
-# data = load_iris_from_path(cur_path)
-# desc_iris(data)
-# visual_iris(data)
+#     # pylint: disable=no-value-for-parameter
+#     generate_iris()
+#     cur_path = "./Iris.csv"
+#     data = load_iris_from_path(cur_path)
+#     desc_iris(data)
+#     visual_iris(data)
