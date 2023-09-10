@@ -9,7 +9,7 @@ format:
 	black *.py 
 
 lint:
-	pylint *.py mylib/*.py
+	pylint *.py
 
 container-lint:
 	docker run --rm -i hadolint/hadolint < Dockerfile

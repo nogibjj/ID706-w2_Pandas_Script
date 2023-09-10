@@ -45,3 +45,23 @@ def test_visual_iris():
     # delete the file
     os.remove(path)
     assert path == "iris_comparison.png", f"visualization failed or file path is wrong"
+
+
+def test_generate_iris():
+    import os
+
+    generate_iris()
+    assert os.path.isfile("./Iris.csv")
+    df = pd.read_csv("./Iris.csv")
+    assert df.shape[1] == 5
+    assert df.shape[0] == 150
+    expected_columns = [
+        "sepal length (cm)",
+        "sepal width (cm)",
+        "petal length (cm)",
+        "petal width (cm)",
+        "target",
+    ]
+    assert list(df.columns) == expected_columns
+    assert df.isnull().sum().sum() == 0
+    assert set(df["target"].unique()) == {0, 1, 2}
